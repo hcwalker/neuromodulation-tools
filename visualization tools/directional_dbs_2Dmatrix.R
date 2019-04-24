@@ -9,7 +9,7 @@ setwd("C:/R processes")
 
 {
 directional_rows <- 2 # number of directional rows
-directional_segments <- 4 # number of directional contact segments per row
+directional_segments <- 3 # number of directional contact segments per row
 participants <- 10 # number of participants
 mydata <- c(1:(directional_rows*directional_segments*participants)) # insert a vector with the data of interest sorted by participant and contact number
 spacer <- rep(NA, directional_segments) # spacer with number of NAs equal in length to directional segments
@@ -63,7 +63,7 @@ if (length(empty_rows)>0) { # remove padding rows
 par(mfrow = c(1, 1))
 par(fg="white") # plot the data
 image2D(mydata_matrix, border="white", 
-        main="therapeutic window (mA)",
+        main="variable of interest",
         axes=FALSE, xlab=NA, ylab=NA)
 par(fg="black")
 }
