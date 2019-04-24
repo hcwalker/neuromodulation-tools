@@ -10,7 +10,7 @@ setwd("C:/R processes")
 {
 directional_rows <- 2 # number of directional rows
 directional_segments <- 3 # number of directional contact segments per row
-participants <- 10 # number of participants
+participants <- 13 # number of participants
 mydata <- c(1:(directional_rows*directional_segments*participants)) # insert a vector with the data of interest sorted by participant and contact number
 spacer <- rep(NA, directional_segments) # spacer with number of NAs equal in length to directional segments
 mydata_spaced <- mydata 
