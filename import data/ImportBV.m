@@ -1,7 +1,6 @@
 % pop_loadbv() - load Brain Vision Data Exchange format dataset and
 %                return EEGLAB EEG structure
 
-
 % Usage:
 %   >> [EEG, com] = pop_loadbv; % pop-up window mode
 %   >> [EEG, com] = pop_loadbv(path, hdrfile);
