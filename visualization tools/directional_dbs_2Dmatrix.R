@@ -1,5 +1,5 @@
-## visualize directional DBS contacts within and across
-## participants in a scaleable, square 2D color matrix
+## visualize a single variable across directional DBS contacts 
+## in a scaleable, square 2D color matrix
 
 install.packages("dplyr")
 install.packages("plot3D")
