@@ -9,15 +9,9 @@ setwd("C:/R processes")
 
 {
 directional_rows <- 2 # number of directional rows
-directional_segments <- 3 # number of directional contact segments per row
-participants <- 12 # number of participants
-# participants <- length(unique(mydata_tw$id)) # number of participants
-# mydata <- c(rep(1,6),rep(2,6),rep(3,6))
-# mydata <- c(rep(1,6),rep(2,6),rep(3,6),rep(4,6),rep(5,6), rep(6,6), rep(7,6), rep(8,6), rep(9,6), rep(10,6), rep(11,6), rep(12,6)) 
-mydata <- c(1:(directional_rows*directional_segments*participants))
-# mydata <- c(rep(2:7,participants))
-# mydata <- as.numeric(mydata_long$power)
-# mydata <- mydata_tw$tw_window
+directional_segments <- 4 # number of directional contact segments per row
+participants <- 10 # number of participants
+mydata <- c(1:(directional_rows*directional_segments*participants)) # insert a vector with the data of interest sorted by participant and contact number
 spacer <- rep(NA, directional_segments) # spacer with number of NAs equal in length to directional segments
 mydata_spaced <- mydata 
 for (i in 1:(participants)) { # append spaces between each participant
@@ -37,7 +31,7 @@ padding <- dimensions - participants # check to see if padding is needed
 if (padding > 0) { # if padding is needed
   for (i in 1:padding) { # iterate through number of pads needed
     for (i in 1:(directional_rows + 1)) { # insert NAs for each pad
-      mydata_df_long[nrow(mydata_df_long)+1,] <- c(NA,NA,NA)
+      mydata_df_long[nrow(mydata_df_long)+1,] <- c(rep(NA,directional_segments))
     }
   }
 }
