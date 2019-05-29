@@ -8,9 +8,9 @@ library(plot3D)
 setwd("C:/R processes")
 
 {
-directional_rows <- 4 # number of directional rows
-directional_segments <- 5 # number of directional contact segments per row
-participants <- 45 # number of participants
+directional_rows <- 2 # number of directional rows
+directional_segments <- 3 # number of directional contact segments per row
+participants <- 12 # number of participants
 mydata <- c(1:(directional_rows*directional_segments*participants)) # insert a vector with the data of interest sorted by participant and contact number
 spacer <- rep(NA, directional_segments) # spacer with number of NAs equal in length to directional segments
 mydata_spaced <- mydata 
@@ -18,7 +18,7 @@ for (i in 1:(participants)) { # append spaces between each participant
   mydata_spaced <- append(mydata_spaced, spacer, 
   after=((directional_rows*directional_segments*i)+((i-1)*length(spacer))))
 }
-mydata_spaced
+
 x <- 1:(directional_rows*participants+(participants-1)) # dimensions for initial matrix
 y <- 1:directional_segments
 mydata_matrix_long <- matrix (nrow=max(y), ncol=max(x)+1, data=mydata_spaced)
